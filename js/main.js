@@ -104,6 +104,12 @@ $('#izmeniForm').submit(function () {
 
     // kreirati request za UPDATE handler
 
+    request = $.ajax({
+        url: 'handler/update.php',
+        type: 'post',
+        data: serializedData,
+    });
+
     request.done(function (response, textStatus, jqXHR) {
 
 
